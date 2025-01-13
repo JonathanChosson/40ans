@@ -2,6 +2,18 @@ const canvas = document.getElementById("scratchCanvas");
 const hiddenContent = document.getElementById("hiddenContent");
 const ctx = canvas.getContext("2d");
 
+// Variable pour vérifier si les confettis ont été déclenchés
+let confettiTriggered = false;
+
+// Fonction pour lancer les confettis
+function launchConfetti() {
+    confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }, // Lancement des confettis légèrement en dessous du haut
+    });
+}
+
 canvas.width = hiddenContent.offsetWidth;
 canvas.height = hiddenContent.offsetHeight;
 
@@ -51,6 +63,8 @@ function stopScratch() {
         (transparentPixels / (canvas.width * canvas.height)) * 100;
     if (transparency > 30) {
         canvas.style.display = "none";
+        launchConfetti();
+        confettiTriggered = true;
     }
 }
 
