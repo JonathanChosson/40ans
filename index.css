@@ -1,3 +1,11 @@
+.global {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #scratchCanvas {
     position: absolute;
     top: 0;
@@ -7,8 +15,8 @@
 }
 #hiddenContent {
     position: relative;
-    width: 300px;
-    height: 200px;
+    width: 350px;
+    height: 650px;
     background: #ffcc00;
     display: flex;
     align-items: center;
@@ -19,8 +27,8 @@
 }
 .container {
     position: relative;
-    width: 300px;
-    height: 200px;
+    width: 350px;
+    height: 650px;
 }
 
 canvas {
@@ -30,12 +38,3 @@ canvas {
     -ms-touch-action: none;
     user-select: none;
 }
-
-/* 
-body {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
