@@ -1,0 +1,41 @@
+#scratchCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: crosshair;
+    z-index: 1;
+}
+#hiddenContent {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: #ffcc00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+.container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+
+canvas {
+    touch-action: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -ms-touch-action: none;
+    user-select: none;
+}
+
+/* 
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
