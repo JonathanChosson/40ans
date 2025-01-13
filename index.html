@@ -5,11 +5,61 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>40ans Lydie et John</title>
         <link rel="stylesheet" href="index.css" />
+        <script
+            src="https://kit.fontawesome.com/c11004fa9a.js"
+            crossorigin="anonymous"
+        ></script>
     </head>
     <body>
         <div class="global">
             <div class="container">
-                <div id="hiddenContent">Invitation 40 ans !</div>
+                <div id="hiddenContent">
+                    <h1>Lydie et john</h1>
+                    <h2>Vous invites à venir fêter leurs 40 ans !</h2>
+                    <h3>🎈🎉🎈🎉🎈🎉🎈</h3>
+                    <div id="timer"></div>
+                    <section id="details">
+                        <p>
+                            <strong>
+                                <i class="fa-regular fa-calendar"></i> :</strong
+                            >
+                            29 Mars 2025
+                        </p>
+                        <p>
+                            <strong
+                                ><i class="fa-regular fa-clock"></i> :</strong
+                            >
+                            19h
+                        </p>
+                        <p>
+                            <strong
+                                ><i class="fa-solid fa-map-location-dot"></i>
+                                :</strong
+                            ><a
+                                href=" https://www.google.com/maps/place//data=!4m2!3m1!1s0x478aac8da319e6f1:0x7d7a52e15cb9c4cf?sa=X&ved=1t:8290&ictx=111"
+                            >
+                                4 place Raymond Chovin, 26300 Marches</a
+                            >
+                        </p>
+                    </section>
+                    <section id="rsvp">
+                        <h3>Confirmez votre présence</h3>
+                        <form>
+                            <label for="name">Nom :</label>
+                            <input type="text" id="name" name="name" required />
+                            <br />
+                            <label for="nombre">Nombre</label>
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                required
+                            />
+                            <br />
+                            <button type="submit">Envoyer</button>
+                        </form>
+                    </section>
+                </div>
                 <canvas id="scratchCanvas"></canvas>
             </div>
         </div>
