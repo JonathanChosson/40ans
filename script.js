@@ -2,6 +2,41 @@ const canvas = document.getElementById("scratchCanvas");
 const hiddenContent = document.getElementById("hiddenContent");
 const ctx = canvas.getContext("2d");
 
+const btn = document.getElementById("button");
+const form = document.getElementById("reponse");
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    btn.value = "Envoie...";
+
+    // emailjs
+    //     .send("service_74w8vjh", "template_xbtwwjy", {
+    //         nom: document.getElementById("nom").value,
+    //         nombre: document.getElementById("nombre").value,
+    //     })
+    //     .then(
+    //         function (response) {
+    //             alert("E-mail envoyé avec succès !");
+    //         },
+    //         function (error) {
+    //             alert("Erreur lors de l'envoi de l'e-mail.");
+    //         }
+    //     );
+
+    const serviceID = "default_service";
+    const templateID = "template_xbtwwjy";
+
+    emailjs.sendForm(serviceID, templateID, this).then(
+        () => {
+            btn.value = "Répondre";
+            alert("Réponse envoyé");
+        },
+        (err) => {
+            btn.value = "Répondre";
+            alert(JSON.stringify(err));
+        }
+    );
+});
+
 // Variable pour vérifier si les confettis ont été déclenchés
 let confettiTriggered = false;
 
